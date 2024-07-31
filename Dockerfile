@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN npm install
+RUN npm config set registry https://registry.npmjs.org/ && npm install
 
 ENTRYPOINT ["npm", "run"]
 
