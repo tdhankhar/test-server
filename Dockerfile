@@ -1,10 +1,12 @@
-FROM node:20.12.0-alpine3.19
+FROM node:20
 
 WORKDIR /app
 
-COPY . .
+COPY package.json ./
 
 RUN npm install
+
+COPY . .
 
 ENTRYPOINT ["npm", "run"]
 
